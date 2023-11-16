@@ -22,7 +22,7 @@
 <br/>
 <br/>
 
-<a href="authors">Many to one</a>
+<a href="authors">Many to many</a>
 
 </body>
 </html>
