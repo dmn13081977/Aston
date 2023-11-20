@@ -10,8 +10,6 @@ import org.hibernate.cfg.Configuration;
 import java.util.List;
 
 public class EmployeeTest {
-    FullTimeEmployee fullTimeEmployee;
-    PartTimeEmployee partTimeEmployee;
     public static void main(String[] args) {
 
         try (SessionFactory factory = new Configuration()
@@ -24,8 +22,9 @@ public class EmployeeTest {
             Session session = factory.getCurrentSession();
             session.beginTransaction();
 
-           List<Employee> employees = session.createQuery("from Employee").getResultList();
-                System.out.println(employees);
+            List<Employee> employees = session.createQuery("from Employee").getResultList();
+            for (Employee x : employees) System.out.println(x + " - "
+                    + x.getName() + " " + x.getSurname());
 
             session.getTransaction().commit();
         }
