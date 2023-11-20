@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <servlet>
+       <servlet-name>OneToMany</servlet-name>
+        <servlet-class>javaee.servlets.OneToMany</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OneToMany</servlet-name>
+        <url-pattern>/books</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ManyToMany</servlet-name>
+        <servlet-class>javaee.servlets.ManyToMany</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManyToMany</servlet-name>
+        <url-pattern>/authors</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ManyToManyHibernate</servlet-name>
+        <servlet-class>javaee.servlets.ManyToManyHibernate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManyToManyHibernate</servlet-name>
+        <url-pattern>/hibernate</url-pattern>
+    </servlet-mapping>
+
+</web-app>
